@@ -1,4 +1,4 @@
-<h1 align="center">Night Vision Screen Shaders</h1>
+<h1 align="center">Godot Night Vision Screen Shaders</h1>
 
 <p align="center">A demo repository for an article on night vision screen shaders ported from Shadertoy.<p>
 
