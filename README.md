@@ -18,11 +18,34 @@ If you would like to see the final results, you can download or clone this repo 
 
 If you would like to skip to a specific shader, use the navigation menu below:
 
-- [Shader 1: Grainy Night Vision](#shader-1:-grainy-night-vision)
-- [Shader 2: Grainy Night Vision Alt](#shader-2:-grainy-night-vision-alt)
-- [Shader 3: Blur Night Vision](#shader-3:-blur-night-vision)
-- [Shader 4: Scanlines Night Vision](#shader-4:-scanlines-night-vision)
-- [Shader 5: Pixelated Night Vision](#shader-5:-pixelated-night-vision)
+- [Creating a Screen Shader](#creating-a-screen-shader)
+- [Shader 1: Grainy Night Vision](#shader-1---grainy-night-vision)
+- [Shader 2: Grainy Night Vision Alt](#shader-2---grainy-night-vision-alt)
+- [Shader 3: Blur Night Vision](#shader-3---blur-night-vision)
+- [Shader 4: Scanlines Night Vision](#shader-4---scanlines-night-vision)
+- [Shader 5: Pixelated Night Vision](#shader-5---pixelated-night-vision)
+
+## Creating a Screen Shader
+
+Before we get into the shaders, let's see how we can create a screen shader in 3D. First, we need to start out with a 3D scene so create a new scene and set the root node to be a spatial.
+
+After this, we want to set up a little scene so we can actually see something through the night vision shader so just add a couple CSG spheres or shapes and add a Camera that's pointed towards them.
+
+Here is the scene I've set up below:
+
+![Scene Setup](../../images/jul/godot-night-vision-screen-shaders/scene-setup.png)
+
+Now for the screen shader part, let's say that your current scene heirarchy looks like so:
+
+![Initial Scene Tree](../../images/jul/godot-night-vision-screen-shaders/initial-scene-tree.png)
+
+We want to add a `ColorRect` node below the below the Camera node and then while the `ColorRect` node is selected, go to the top toolbar and select `Layout -> Full Rect` and it'll make the `ColorRect` take up the whole screen.
+
+Lastly, while the `ColorRect` node is selected, go to the inspector and change the material to a new shader material, click into the new shader material, and under `Shader` you click `New Shader` and finally click into that to bring up the Shader editor. After you write the shader I highly recommend saving both the shader and the material into their own resources so you don't have to create a new material and shader every time.
+
+![Screen Shader Material Setup](../../images/jul/godot-night-vision-screen-shaders/screen-shader-setup.png)
+
+Now that the shader editor is open you can use any of the shaders below and when you run your scene you'll be able to see your 3D scene but with a night vision filter in front of the camera.
 
 ## Shader 1: Grainy Night Vision
 
