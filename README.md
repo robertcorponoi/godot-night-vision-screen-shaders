@@ -2,7 +2,7 @@
 
 <p align="center">A demo repository for an article on night vision screen shaders ported from Shadertoy.<p>
 
-The contents of this README are the same as the article on my [website](https://robertcorponoi.com/night-vision-screen-shaders). If you came from the website, you can just download or clone the repo and import the project in Godot to see the screen shaders in action.
+The contents of this README are the same as the article on my [website](https://robertcorponoi.com/shadertoy-to-godot-night-vision-screen-shaders/). If you came from the website, you can just download or clone the repo and import the project in Godot to see the screen shaders in action.
 
 ## Introduction
 
