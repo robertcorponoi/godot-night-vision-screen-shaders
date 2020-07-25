@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="471" height="231" src="https://raw.githubusercontent.com/robertcorponoi/graphics/master/tutorials/godot-night-vision-screen-shaders/night-vision-grainy-alt.png">
+</p>
+
 <h1 align="center">Godot Night Vision Screen Shaders</h1>
 
 <p align="center">A demo repository for an article on night vision screen shaders ported from Shadertoy.<p>
@@ -33,17 +37,17 @@ After this, we want to set up a little scene so we can actually see something th
 
 Here is the scene I've set up below:
 
-![Scene Setup](../../images/jul/godot-night-vision-screen-shaders/scene-setup.png)
+![Scene Setup](https://raw.githubusercontent.com/robertcorponoi/graphics/master/tutorials/godot-night-vision-screen-shaders/scene-setup.png)
 
 Now for the screen shader part, let's say that your current scene heirarchy looks like so:
 
-![Initial Scene Tree](../../images/jul/godot-night-vision-screen-shaders/initial-scene-tree.png)
+![Initial Scene Tree](https://raw.githubusercontent.com/robertcorponoi/graphics/master/tutorials/godot-night-vision-screen-shaders/initial-scene-tree.png)
 
 We want to add a `ColorRect` node below the below the Camera node and then while the `ColorRect` node is selected, go to the top toolbar and select `Layout -> Full Rect` and it'll make the `ColorRect` take up the whole screen.
 
 Lastly, while the `ColorRect` node is selected, go to the inspector and change the material to a new shader material, click into the new shader material, and under `Shader` you click `New Shader` and finally click into that to bring up the Shader editor. After you write the shader I highly recommend saving both the shader and the material into their own resources so you don't have to create a new material and shader every time.
 
-![Screen Shader Material Setup](../../images/jul/godot-night-vision-screen-shaders/screen-shader-setup.png)
+![Screen Shader Material Setup](https://raw.githubusercontent.com/robertcorponoi/graphics/master/tutorials/godot-night-vision-screen-shaders/screen-shader-setup.png)
 
 Now that the shader editor is open you can use any of the shaders below and when you run your scene you'll be able to see your 3D scene but with a night vision filter in front of the camera.
 
@@ -132,7 +136,7 @@ So I've highlighted the differences but I'll go over them again quickly. Every s
 Below that I've added a couple uniforms so that the fade-in time and noise amount can be adjusted in the inspector or by code. The rest comes down to constants such as `iResolution`, `fragCoord`, `time`, and `fragColor`. `iResolution` is a global in Shadertoy that we have to define and according to the Godot docs we can define it as `1.0 / SCREEN_PIXEL_SIZE` or we can pass it in, so we just use the first method. The other globals match up to other globals in Godot such as `fragCoord` is `FRAGCOORD`, `time` is `TIME`, and `fragColor` is `COLOR`.
 
 An image of the effect can be seen below and a short gif of it can be found on Gyfcat [here](https://gfycat.com/willingwhitebantamrooster)
-![Grainy Night Vision](../../images/jul/shadertoy-to-godot-night-vision/night-vision-grainy.png)
+![Grainy Night Vision](https://raw.githubusercontent.com/robertcorponoi/graphics/master/tutorials/godot-night-vision-screen-shaders/night-vision-grainy.png)
 
 ## Shader 2: Grainy Night Vision Alt
 
@@ -229,7 +233,7 @@ void fragment() {
 ```
 
 An image of the effect can be seen below and a short gif of it can be found on Gyfcat [here](https://gfycat.com/tintedfittingimpala)
-![Grainy Night Vision Alt](../../images/jul/shadertoy-to-godot-night-vision/night-vision-grainy-alt.png)
+![Grainy Night Vision Alt](https://raw.githubusercontent.com/robertcorponoi/graphics/master/tutorials/godot-night-vision-screen-shaders/night-vision-grainy-alt.png)
 
 ## Shader 3: Blur Night Vision
 
@@ -407,7 +411,7 @@ void fragment()
 As mentioned above in this port we had to scrap the two circles like looked like binoculars because structs don't yet exist in Godot. The rest is pretty much the same as the others where its just globals that are named differently.
 
 An image of the effect can be seen below and a short gif of it can be found on Gyfcat [here](https://gfycat.com/afraidpleasedfanworms)
-![Blur Line Night Vision](../../images/jul/shadertoy-to-godot-night-vision/night-vision-blur-line.png)
+![Blur Line Night Vision](https://raw.githubusercontent.com/robertcorponoi/graphics/master/tutorials/godot-night-vision-screen-shaders/night-vision-blur-line.png)
 
 ## Shader 4: Scanlines Night Vision
 
@@ -501,7 +505,7 @@ void fragment()
 This one is pretty simple and nothing new to go over. Just like with the others we have the same shader type since they're all going to be on a 2D node and most of the changes are just different names which are nicely documented in the official Godot documentation.
 
 An image of the effect can be seen below and a short gif of it can be found on Gyfcat [here](https://gfycat.com/shamefulhauntingjavalina)
-![Scanlines Night Vision](../../images/jul/shadertoy-to-godot-night-vision/night-vision-scanlines.png)
+![Scanlines Night Vision](https://raw.githubusercontent.com/robertcorponoi/graphics/master/tutorials/godot-night-vision-screen-shaders/night-vision-scanlines.png)
 
 ## Shader 5: Pixelated Night Vision
 
@@ -607,7 +611,7 @@ void fragment()
 This shader is a bit different as it wants to be passed the frame number the game is on to create a seed from it. I'm sure you could bypass this by just passing in `TIME` instead but I wanted to preserve the original code as much as possible while porting it over to be used as a shader in Godot.
 
 An image of the effect can be seen below and a short gif of it can be found on Gyfcat [here](https://gfycat.com/goodnaturedconfusedfirebelliedtoad)
-![Pixelated Night Vision](../../images/jul/shadertoy-to-godot-night-vision/night-vision-pixelated.png)
+![Pixelated Night Vision](https://raw.githubusercontent.com/robertcorponoi/graphics/master/tutorials/godot-night-vision-screen-shaders/night-vision-pixelated.png)
 
 ## Conclusion
 
